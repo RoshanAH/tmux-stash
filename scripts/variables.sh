@@ -11,4 +11,4 @@ default_save_all_key="C-a"
 save_all_option="@stash-save-all"
 
 default_load_key="C-p"
-load_session_option="@stash-load"
+load_option="@stash-load"
