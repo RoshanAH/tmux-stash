@@ -29,7 +29,6 @@ set_load_bindings() {
 	local key_bindings=$(get_tmux_option "$load_option" "$default_load_key")
 	local key
 	for key in $key_bindings; do
-        echo "$key"
 		tmux bind-key "$key" run-shell "$CURRENT_DIR/scripts/load.sh"
 	done
 }
