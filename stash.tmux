@@ -17,7 +17,6 @@ set_save_all_bindings() {
 	local key_bindings=$(get_tmux_option "$save_all_option" "$default_save_all_key")
 	local key
 	for key in $key_bindings; do
-        echo "$key"
         tmux bind-key "$key" run-shell "
             for session in $(tmux list-sessions -F '#S'); do 
                 \"$CURRENT_DIR/scripts/save.sh\" \"$session\"
